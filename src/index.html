@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shadow AI Privacy Auditor</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">Protect before you prompt</p>
+          <h1>Shadow AI Privacy Auditor</h1>
+        </div>
+        <div class="status">
+          <span id="findingCount">0 findings</span>
+        </div>
+      </header>
+
+      <section class="workspace" aria-label="Privacy auditor workspace">
+        <div class="pane">
+          <div class="pane-header">
+            <h2>Text to Review</h2>
+            <div>
+              <button id="sampleSafe" type="button">Safe Sample</button>
+              <button id="sampleRisky" type="button">Risky Sample</button>
+            </div>
+          </div>
+          <textarea id="inputText" spellcheck="false" aria-label="Text to scan"></textarea>
+        </div>
+
+        <div class="pane">
+          <div class="pane-header">
+            <h2>Highlighted Findings</h2>
+          </div>
+          <pre id="highlightedText" class="preview" aria-live="polite"></pre>
+        </div>
+      </section>
+
+      <section class="review" aria-label="Review and redaction">
+        <div class="pane findings">
+          <div class="pane-header">
+            <h2>Review</h2>
+          </div>
+          <ul id="findingsList"></ul>
+        </div>
+
+        <div class="pane">
+          <div class="pane-header">
+            <h2>Safer Output</h2>
+            <button id="copyButton" type="button">Copy</button>
+          </div>
+          <textarea id="redactedText" readonly aria-label="Redacted output"></textarea>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
