@@ -65,7 +65,7 @@ The detailed test set and evaluator are in [`src/evaluationData.js`](./src/evalu
 - [x] Complete source code in `src/`
 - [x] README with setup and run instructions
 - [x] Demo video link in `docs/walkthrough.md`
-- [x] Precision, recall, and F1 results
+- [x] Precision, recall, and F1 results in [`docs/evaluation.md`](./docs/evaluation.md)
 - [x] AI tools, libraries, datasets, and templates disclosed
 - [x] Brief approach explanation
 - [x] Model card in `docs/model-card.md`
